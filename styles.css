@@ -1,0 +1,53 @@
+/* styles.css - kustom kecil untuk landing page (pastel pink theme) */
+:root{
+  --brand: #ec4899; /* pink-500 */
+  --brand-100: #ffe6f0;
+  --muted: #9ca3af;
+}
+
+/* small helper to animate mobile menu */
+#mobile-menu.menu-enter{ transform: scaleY(0); transform-origin: top; }
+#mobile-menu.menu-enter-active{ transform: scaleY(1); transition: transform 160ms ease-in-out; }
+
+/* improve focus outlines for keyboard users */
+:focus{ outline: none; }
+:focus-visible{ outline: 3px solid rgba(236,72,153,0.14); border-radius: 6px; }
+
+/* subtle hero text shadow for readability */
+.hero-title{ text-shadow: 0 6px 30px rgba(236,72,153,0.08); }
+
+/* improve base font rendering and spacing */
+body{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+/* feature icon round background */
+.feature-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:56px;
+  height:56px;
+  border-radius:9999px;
+  background: var(--brand-100);
+  color: var(--brand);
+}
+
+/* cards */
+.card{ transition: transform .18s ease, box-shadow .18s ease; border: 1px solid rgba(15,23,42,0.03); background: white; }
+.card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(15,23,42,0.06); }
+
+/* responsive tweaks */
+@media (min-width:1024px){
+  .hero-illustration{ transform: translateX(4%); }
+}
+
+/* small utility for hidden class used in JS */
+.hidden{ display:none !important; }
+
+/* button press / active state for anchors used as buttons */
+.inline-flex:active, .inline-flex:focus-visible, a.block:active {
+  transform: translateY(1px);
+  opacity: 0.98;
+}
+
+/* ensure clickable elements show a pointer */
+a, button { cursor: pointer; }

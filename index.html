@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perusahaan Teknologi — Landing Page</title>
+    <meta name="description" content="Landing page responsif untuk perusahaan teknologi, dibuat dengan Tailwind CSS." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="antialiased text-gray-800 bg-gray-50">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <a href="#" class="flex items-center gap-3" aria-label="TechPerusahaan - home">
+            <div class="bg-pink-500 text-white p-2 rounded-md">
+              <!-- simple logo mark -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <span class="font-semibold text-lg">TechPerusahaan</span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-6" aria-label="Primary">
+            <a href="#features" data-scroll class="text-gray-600 hover:text-pink-600">Features</a>
+            <a href="#about" data-scroll class="text-gray-600 hover:text-pink-600">About</a>
+            <a href="#contact" data-scroll class="text-gray-600 hover:text-pink-600">Contact</a>
+            <a href="#contact" data-scroll class="inline-flex items-center px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600">Get Started</a>
+          </nav>
+
+          <div class="md:hidden">
+            <button id="btn-menu" aria-expanded="false" class="p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pink-300">
+              <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 hidden">
+        <div class="px-4 pt-4 pb-6 space-y-3">
+          <a href="#features" data-scroll class="block text-gray-700">Features</a>
+          <a href="#about" data-scroll class="block text-gray-700">About</a>
+          <a href="#contact" data-scroll class="block text-gray-700">Contact</a>
+          <a href="#contact" data-scroll class="block mt-2 px-4 py-2 bg-pink-500 text-white rounded-md text-center">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="bg-gradient-to-r from-pink-400 to-pink-300 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-20 sm:py-28 lg:py-32">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 class="hero-title text-4xl sm:text-5xl font-extrabold leading-tight">Solusi Teknologi untuk Masa Depan Bisnis Anda</h1>
+              <p class="mt-4 text-pink-100 max-w-xl">Kami menghadirkan produk dan layanan cloud-native, keamanan siber, dan pengembangan perangkat lunak untuk membantu perusahaan berinovasi lebih cepat.</p>
+              <div class="mt-8 flex gap-3">
+                <a href="#contact" data-scroll class="inline-flex items-center px-6 py-3 bg-white text-pink-600 rounded-md font-medium hover:opacity-95">Hubungi Kami</a>
+                <a href="#features" data-scroll class="inline-flex items-center px-6 py-3 border border-white text-white rounded-md hover:bg-white/10">Pelajari Lebih Lanjut</a>
+              </div>
+            </div>
+
+            <div class="hidden lg:block">
+              <div class="bg-white/10 p-8 rounded-xl ring-1 ring-white/10">
+                <!-- mock device or illustration -->
+                <svg viewBox="0 0 600 360" class="w-full h-56 mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="360" rx="16" fill="rgba(255,255,255,0.06)" />
+                  <circle cx="120" cy="100" r="36" fill="rgba(255,255,255,0.12)" />
+                  <rect x="180" y="60" width="320" height="220" rx="12" fill="rgba(255,255,255,0.04)" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold">Fitur Unggulan</h2>
+            <p class="mt-2 text-gray-600">Tiga pilar layanan kami yang membantu transformasi digital Anda.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card rounded-lg p-6 text-center">
+              <div class="feature-icon mx-auto">
+                <!-- icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2v6h4v-6c0-1.1-.9-2-2-2zM6 6h12v2H6z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Cloud & Infrastruktur</h3>
+              <p class="mt-2 text-gray-600">Solusi cloud yang scalable, deployment otomatis, dan monitoring untuk uptime maksimal.</p>
+            </div>
+
+            <div class="card rounded-lg p-6 text-center">
+              <div class="feature-icon mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM6 6h.01M6 12h.01M6 18h.01M9 6h.01M9 12h.01M9 18h.01" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Pengembangan Perangkat Lunak</h3>
+              <p class="mt-2 text-gray-600">Tim engineering berpengalaman untuk membangun aplikasi web dan mobile yang aman dan maintainable.</p>
+            </div>
+
+            <div class="card rounded-lg p-6 text-center">
+              <div class="feature-icon mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">Keamanan & Kepatuhan</h3>
+              <p class="mt-2 text-gray-600">Penilaian risiko, audit keamanan, dan penerapan kebijakan untuk perlindungan data.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-2xl font-bold">Tentang Kami</h2>
+          <p class="mt-4 text-gray-600">TechPerusahaan berdiri untuk membantu organisasi mempercepat transformasi digital. Kami fokus pada solusi praktis, partner yang transparan, dan hasil yang terukur.</p>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold">Visi</h4>
+              <p class="text-sm text-gray-600 mt-2">Menciptakan teknologi yang memberdayakan bisnis.</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold">Misi</h4>
+              <p class="text-sm text-gray-600 mt-2">Menyediakan solusi andal dan inovatif untuk klien kami.</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold">Nilai</h4>
+              <p class="text-sm text-gray-600 mt-2">Integritas, kolaborasi, dan fokus pada hasil.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-16">
+        <div class="max-w-3xl mx-auto px-4">
+          <h2 class="text-2xl font-bold text-center">Kontak</h2>
+          <p class="text-center mt-2 text-gray-600">Isi formulir di bawah ini dan tim kami akan menghubungi Anda dalam 1-2 hari kerja.</p>
+
+          <form id="contact-form" class="mt-8 bg-white rounded-lg shadow-sm p-6 space-y-4" action="#" method="post">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700">Nama</label>
+                <input required name="name" type="text" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Nama Anda" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input required name="email" type="email" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2 focus:ring-pink-500 focus:border-pink-500" placeholder="email@domain.com" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Pesan</label>
+              <textarea required name="message" rows="4" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <button type="submit" class="inline-flex items-center px-5 py-2 bg-pink-500 text-white rounded-md">Kirim Pesan</button>
+              <p id="form-status" class="text-sm text-green-600 hidden">Pesan terkirim. Terima kasih!</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>© <span id="year"></span> TechPerusahaan. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 19c7.333 0 11.333-6.667 11.333-12.444 0-.191 0-.381-.013-.571A8.1 8.1 0 0 0 20 4.444a7.78 7.78 0 0 1-2.285.628A3.985 3.985 0 0 0 19.447 3c-.765.45-1.613.778-2.513.96A3.943 3.943 0 0 0 12.28 7.12c0 .31.031.614.102.904A11.2 11.2 0 0 1 3.128 4.69a3.93 3.93 0 0 0-.533 1.985c0 1.369.697 2.574 1.755 3.28A3.905 3.905 0 0 1 2.6 9.56v.05c0 1.915 1.382 3.512 3.214 3.876a3.936 3.936 0 0 1-1.79.068c.506 1.572 1.977 2.714 3.715 2.748A7.906 7.906 0 0 1 2 17.49 11.157 11.157 0 0 0 8 19"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 24h4V7h-4v17zM8.5 24h4v-9.5c0-5 7-5.4 7 0V24h4v-10.5C23.5 7 16.06 6 12 9.5V24z"/></svg>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234C6.728 20.2 6.14 18.06 6.14 18.06c-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.76-1.605-4.665-.53-9.555-2.332-9.555-10.366 0-2.285.81-4.152 2.137-5.615-.214-.53-.927-2.666.205-5.556 0 0 1.743-.558 5.712 2.139 1.657-.46 3.432-.69 5.197-.699 1.765.009 3.541.239 5.198.699 3.968-2.697 5.709-2.139 5.709-2.139 1.133 2.89.42 5.026.207 5.556C23.69 8.98 24.5 10.847 24.5 13.132c0 8.05-4.896 9.829-9.564 10.352.43.371.814 1.102.814 2.222v3.293c0 .322.216.694.825.576C20.565 22.092 24 17.594 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // mobile menu toggle
+      const btn = document.getElementById('btn-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        mobileMenu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      });
+
+      // contact form: fake submit and show status
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // simple validation already handled by required attributes
+        status.classList.remove('hidden');
+        setTimeout(() => { status.classList.add('hidden'); form.reset(); }, 3000);
+      });
+
+      // Smooth scroll for internal links with data-scroll and focus management
+      document.querySelectorAll('a[data-scroll]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const href = a.getAttribute('href');
+          if (!href || !href.startsWith('#')) return;
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (!target) return;
+          // close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // if going to contact, focus first input after scroll
+          if (href === '#contact') {
+            setTimeout(() => {
+              const first = target.querySelector('input, textarea, button');
+              if (first) first.focus();
+            }, 600);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
