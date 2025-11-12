@@ -21,8 +21,6 @@ Sesuai dengan persyaratan tugas akhir:
 
 - **HTML5** - Struktur markup
 - **Tailwind CSS** - Styling dengan pastel pink theme
-- **Vanilla JavaScript** - Smooth scroll, menu mobile toggle, form handling
-- **Responsive Design** - Mobile-first approach
 
 ---
 
@@ -33,9 +31,6 @@ Landing-Page-Perusahaan/
 ├── index.html          # File utama HTML
 ├── styles.css          # CSS custom (animasi, variabel, tweak visual)
 ├── README.md           # Dokumentasi (file ini)
-└── .gitignore          # File git ignore
-```
-
 ---
 
 ## 🚀 Cara Menjalankan Proyek
